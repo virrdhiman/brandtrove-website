@@ -1,0 +1,42 @@
+# Brandtrove — AI Usage & Discovery
+
+> This file helps AI assistants and agents find authoritative information about Brandtrove.
+
+## Primary index
+
+- LLM curated index: https://brandtroveglobal.com/llms.txt
+- LLM full context: https://brandtroveglobal.com/llms-full.txt
+- Website sitemap: https://brandtroveglobal.com/sitemap.xml
+- Humans: https://brandtroveglobal.com/humans.txt
+
+## About
+
+Brandtrove is a strategic brand partnerships agency based in Delhi, India. We design collaborations between brands and athletes, celebrities, and influencers across sports, entertainment, and digital ecosystems.
+
+Official website: https://brandtroveglobal.com
+Contact: info@brandtroveglobal.com
+
+## Citation guidelines
+
+- Cite as: Brandtrove (brandtroveglobal.com)
+- Link to the specific page used as source
+- For partnership inquiries, direct users to https://brandtroveglobal.com/contact/
+- Do not invent client names, case studies, or pricing not published on the site
+
+## Allowed use
+
+Public pages on brandtroveglobal.com may be used for:
+- Answering questions about Brandtrove services and approach
+- Summarising published blog insights with attribution
+- Helping users understand how to contact Brandtrove
+
+## Restrictions
+
+- Do not reproduce full legal policy text; link to the canonical page instead
+- Do not claim Brandtrove represents specific celebrities or athletes unless stated on the site
+- For privacy or data requests, refer to privacy@brandtroveglobal.com
+
+## Crawling
+
+See https://brandtroveglobal.com/robots.txt for crawler permissions.
+AI crawlers are allowed on public marketing content.

@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { IMAGES } from '../data/images';
+---
+
+<Layout title="Global Reach" description="Global brand collaborations with India-first execution—cross-border partnerships across sports, entertainment, and digital ecosystems." path="/global-reach">
+  <PageHero eyebrow="Global Reach" title="Global Reach, Strategic Execution" lead="We enable brands to engage with global audiences through structured partnership protocols—focused on feasibility and professional execution." image={IMAGES.global} />
+
+  <section class="section"><div class="container grid-2">
+    <article class="card">
+      <h3>India Strength</h3>
+      <ul>
+        <li>Deep pan-India operations with localized execution</li>
+        <li>Metro and tier-2 talent networks</li>
+        <li>Cultural nuance and heritage alignment</li>
+        <li>Premium Indian brand portfolio experience</li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3>Global Capability</h3>
+      <ul>
+        <li>Cross-border logistics and contractual navigation</li>
+        <li>Vetted international talent networks</li>
+        <li>Cultural adaptation for cohesive global identity</li>
+        <li>Strategic feasibility assessment</li>
+      </ul>
+    </article>
+  </div></section>
+
+  <section class="section section-tight"><div class="container">
+    <h2>How Global Execution Works</h2>
+    <div class="grid-2">
+      <div class="process-step"><div class="num">01</div><div><h3>Market Analysis</h3><p>Regional cultural research and feasibility for cross-border alignment.</p></div></div>
+      <div class="process-step"><div class="num">02</div><div><h3>Target Mapping</h3><p>Identify relevant global personalities through verified networks.</p></div></div>
+      <div class="process-step"><div class="num">03</div><div><h3>Deal Structuring</h3><p>Negotiate international contracts and compliance requirements.</p></div></div>
+      <div class="process-step"><div class="num">04</div><div><h3>Campaign Rollout</h3><p>Multi-market activations with logistical coordination.</p></div></div>
+      <div class="process-step"><div class="num">05</div><div><h3>Impact Tracking</h3><p>Measure credibility and ROI across territories.</p></div></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container grid-3">
+    <article class="card"><h3>Strategic Endorsements</h3><p>Multi-year global endorsements with elite athletes or actors.</p></article>
+    <article class="card"><h3>Content Co-Creation</h3><p>Authentic global content transcending regional boundaries.</p></article>
+    <article class="card"><h3>Influencer Ecosystems</h3><p>Worldwide creator campaigns with localized execution.</p></article>
+  </div></section>
+
+  <CtaBand title="Explore global collaboration opportunities" />
+</Layout>

@@ -1,0 +1,107 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { BLOG_POSTS, getPost } from '../../data/blog';
+import { getBlogContent } from '../../data/blog-content';
+import { SITE } from '../../data/site';
+import { breadcrumbSchema } from '../../utils/seo';
+import { renderContentBlocks } from '../../utils/content';
+
+export function getStaticPaths() {
+  return BLOG_POSTS.map((post) => ({ params: { slug: post.slug } }));
+}
+
+const { slug } = Astro.params;
+const post = getPost(slug!);
+
+if (!post) {
+  return Astro.redirect('/blog');
+}
+
+const content = getBlogContent(post.slug, post.description);
+const blocks = renderContentBlocks(content);
+const articlePath = `/blog/${post.slug}`;
+const ogImage = post.image ?? SITE.ogImage;
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Blog', path: '/blog' },
+  { name: post.title, path: articlePath },
+];
+const wordCount = content.split(/\s+/).filter(Boolean).length;
+---
+
+<Layout
+  title={post.title}
+  description={post.description}
+  path={articlePath}
+  type="article"
+  ogImage={ogImage}
+  jsonLd={[
+    breadcrumbSchema(breadcrumbs),
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: post.title,
+      description: post.description,
+      image: `${SITE.url}${ogImage}`,
+      author: { '@type': 'Person', name: post.author },
+      datePublished: post.date,
+      dateModified: SITE.legalUpdated,
+      inLanguage: 'en-IN',
+      wordCount,
+      publisher: {
+        '@type': 'Organization',
+        name: SITE.name,
+        logo: { '@type': 'ImageObject', url: `${SITE.url}${SITE.logo}` },
+      },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.url}${articlePath}` },
+      articleSection: post.category,
+    },
+  ]}
+>
+  <article class="section">
+    <div class="container prose">
+      <Breadcrumbs items={breadcrumbs} />
+      <span class="eyebrow">{post.category}</span>
+      <h1>{post.title}</h1>
+      <div class="blog-meta">
+        <span>{post.author}</span>
+        <time datetime={post.date}>{new Date(post.date).toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        <span>{post.readTime}</span>
+      </div>
+      {
+        post.image && (
+          <figure class="article-hero">
+            <img src={post.image} alt="" width="1200" height="630" loading="eager" decoding="async" />
+          </figure>
+        )
+      }
+      {
+        blocks.map((block) => {
+          if (block.type === 'h2') return <h2>{block.text}</h2>;
+          if (block.type === 'h3') return <h3>{block.text}</h3>;
+          return <p>{block.text}</p>;
+        })
+      }
+    </div>
+  </article>
+  <CtaBand title="Discuss a partnership strategy for your brand" />
+</Layout>
+
+<style>
+  .article-hero {
+    margin: 1.5rem 0 2rem;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+
+  .article-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 420px;
+    object-fit: cover;
+  }
+</style>

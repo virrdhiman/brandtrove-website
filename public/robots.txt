@@ -1,0 +1,52 @@
+# Brandtrove — brandtroveglobal.com
+# https://brandtroveglobal.com/robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /insights
+
+# LLM / AI site index
+# https://brandtroveglobal.com/llms.txt
+# https://brandtroveglobal.com/llm.txt
+# https://brandtroveglobal.com/llms-full.txt
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Google AI
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Common Crawl (used by many AI systems)
+User-agent: CCBot
+Allow: /
+
+# Meta
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+Sitemap: https://brandtroveglobal.com/sitemap.xml

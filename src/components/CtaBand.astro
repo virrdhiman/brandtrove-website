@@ -1,0 +1,9 @@
+---
+const { href = '/contact', label = 'Start a Project', title, text } = Astro.props;
+---
+
+<section class="cta-band container">
+  {title && <h2>{title}</h2>}
+  {text && <p class="lead">{text}</p>}
+  <a class="btn btn-primary" href={href}>{label}</a>
+</section>

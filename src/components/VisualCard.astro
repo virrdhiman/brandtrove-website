@@ -1,0 +1,99 @@
+---
+interface Props {
+  image: string;
+  alt: string;
+  title: string;
+  description: string;
+  href: string;
+  tag?: string;
+}
+
+const { image, alt, title, description, href, tag } = Astro.props;
+---
+
+<article class="visual-card">
+  <a href={href} class="visual-card-link">
+    <div class="visual-card-media">
+      <img src={image} alt={alt} loading="lazy" width="400" height="280" />
+      {tag && <span class="visual-card-tag">{tag}</span>}
+    </div>
+    <div class="visual-card-body">
+      <h3>{title}</h3>
+      <p>{description}</p>
+      <span class="visual-card-cta">Explore →</span>
+    </div>
+  </a>
+</article>
+
+<style>
+  .visual-card {
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .visual-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(94, 179, 240, 0.35);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  }
+
+  .visual-card-link {
+    display: block;
+    height: 100%;
+  }
+
+  .visual-card-media {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+  }
+
+  .visual-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+  }
+
+  .visual-card:hover img {
+    transform: scale(1.06);
+  }
+
+  .visual-card-tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: rgba(0, 0, 0, 0.65);
+    color: var(--brand-blue-light);
+    border: 1px solid var(--border);
+  }
+
+  .visual-card-body {
+    padding: 1.35rem 1.35rem 1.5rem;
+  }
+
+  .visual-card-body h3 {
+    color: var(--text);
+    margin-bottom: 0.65rem;
+  }
+
+  .visual-card-body p {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .visual-card-cta {
+    color: var(--productive-green);
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+</style>

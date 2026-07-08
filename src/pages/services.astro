@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import VisualCard from '../components/VisualCard.astro';
+import { IMAGES } from '../data/images';
+---
+
+<Layout
+  title="Services"
+  description="Brandtrove offers celebrity partnerships, influencer campaigns, brand endorsements, events, and campaign strategy for high-impact brand collaborations."
+  path="/services"
+>
+  <PageHero
+    eyebrow="Services"
+    title="Strategic Services for High-Impact Brand Partnerships"
+    lead="From athlete collaborations to influencer campaigns, Brandtrove offers end-to-end solutions that combine strategy, execution, and measurable outcomes."
+    image={IMAGES.hero}
+  />
+
+  <section class="section section-tight">
+    <div class="container grid-2">
+      <VisualCard image={IMAGES.sports} alt="Sports partnerships" title="Sports & Athletes" description="Cricket, Olympic sports, emerging athletes, and multi-sport campaigns." href="/sports-collaborations" tag="Sports" />
+      <VisualCard image={IMAGES.influencer} alt="Influencer campaigns" title="Influencer & Creator" description="Regional and national creator ecosystems with performance tracking." href="/influencer-creator" tag="Digital" />
+      <VisualCard image={IMAGES.entertainment} alt="Brand partnerships" title="Brand Partnerships" description="Endorsements, appearances, and long-term celebrity associations." href="/brand-partnerships" tag="Partnerships" />
+      <VisualCard image={IMAGES.events} alt="Events and experiences" title="Events & Experiences" description="Launches, activations, and experiential brand moments." href="/events-experiences" tag="Events" />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid-2">
+      <article class="card">
+        <h3>Celebrity & Athlete Partnerships</h3>
+        <p>Collaborations aligned with brand positioning and audience expectations.</p>
+        <ul>
+          <li>Brand endorsements</li>
+          <li>Campaign collaborations</li>
+          <li>Appearances & associations</li>
+          <li>Strategic talent alignment</li>
+        </ul>
+        <a href="/sports-collaborations">Explore Sports Collaborations →</a>
+      </article>
+      <article class="card">
+        <h3>Influencer Campaigns</h3>
+        <p>Performance-driven campaigns across platforms and regions.</p>
+        <ul>
+          <li>Social media campaigns</li>
+          <li>Creator collaborations</li>
+          <li>Regional influencer activations</li>
+          <li>Multi-platform execution</li>
+        </ul>
+        <a href="/influencer-creator">Explore Influencer Collaborations →</a>
+      </article>
+      <article class="card">
+        <h3>Brand Endorsements</h3>
+        <p>Structured deals that drive cultural relevance and visibility.</p>
+        <ul>
+          <li>Endorsement strategy</li>
+          <li>Talent negotiation</li>
+          <li>Campaign positioning</li>
+          <li>Brand visibility enhancement</li>
+        </ul>
+        <a href="/brand-partnerships">Explore Brand Partnerships →</a>
+      </article>
+      <article class="card">
+        <h3>Events & Experiences</h3>
+        <p>End-to-end brand activations and experiential campaigns.</p>
+        <ul>
+          <li>Brand activations</li>
+          <li>Product launches</li>
+          <li>Corporate events</li>
+          <li>Celebrity appearances</li>
+        </ul>
+        <a href="/events-experiences">Explore Events & Experiences →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <h2>Campaign Strategy & Execution</h2>
+      <p class="lead">Structured planning and execution for measurable business outcomes and long-term impact.</p>
+      <div class="grid-4">
+        <article class="card"><h3>Campaign planning</h3></article>
+        <article class="card"><h3>Talent selection strategy</h3></article>
+        <article class="card"><h3>Execution management</h3></article>
+        <article class="card"><h3>Performance tracking</h3></article>
+      </div>
+      <p style="margin-top:1.5rem"><a href="/how-it-works">Explore How It Works →</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid-4">
+      <article class="card"><h3>Strategy-Led</h3><p>Partnerships aligned with business objectives and brand values.</p></article>
+      <article class="card"><h3>Network-Driven</h3><p>Exclusive access to athletes, celebrities, and creators.</p></article>
+      <article class="card"><h3>Execution-Focused</h3><p>Seamless coordination to professional B2B standards.</p></article>
+      <article class="card"><h3>Measurement-Ready</h3><p>Data-driven tracking with clear ROI visibility.</p></article>
+    </div>
+  </section>
+
+  <CtaBand title="Build the right partnership for your brand" />
+</Layout>

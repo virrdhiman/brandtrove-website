@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { BLOG_POSTS } from '../../data/blog';
+import { IMAGES } from '../../data/images';
+
+const categories = [...new Set(BLOG_POSTS.map((p) => p.category))];
+---
+
+<Layout
+  title="Blog & Insights"
+  description="Expert perspectives on sports partnerships, celebrity endorsements, influencer marketing, brand campaigns, events, and global collaborations."
+  path="/blog"
+>
+  <PageHero
+    eyebrow="Brandtrove Insights"
+    title="Partnership Strategy, Campaigns & Cultural Impact"
+    lead="Explore expert perspectives on sports partnerships, endorsements, influencer marketing, events, industry trends, and global collaborations."
+    image={IMAGES.influencer}
+  />
+
+  <section class="section section-tight">
+    <div class="container">
+      <h2>Explore by Category</h2>
+      <p class="stat-strip">{categories.join(' • ')}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container post-list">
+      {BLOG_POSTS.map((post) => (
+        <article>
+          <p class="eyebrow">{post.category}</p>
+          <h2><a href={`/blog/${post.slug}`}>{post.title}</a></h2>
+          <div class="blog-meta">
+            <span>{post.author}</span>
+            <span>{new Date(post.date).toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            <span>{post.readTime}</span>
+          </div>
+          <p>{post.description}</p>
+          <a href={`/blog/${post.slug}`}>Read article →</a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <CtaBand title="Planning a brand collaboration?" text="Brandtrove helps brands design and execute sports, celebrity, influencer, and global partnerships with measurable impact." />
+</Layout>

@@ -1,0 +1,26 @@
+# Brandtrove — LLM Context (short)
+# Full index: https://brandtroveglobal.com/llms.txt
+
+Site: https://brandtroveglobal.com
+Company: Brandtrove
+Tagline: Where Brands Become Cultural Icons
+Email: info@brandtroveglobal.com
+Phone: +91 9817303991
+Location: Delhi, India
+Services: Sports collaborations, influencer/creator campaigns, celebrity brand partnerships, events & experiential activations
+Markets: Pan-India with global partnership capability
+Industries: FMCG, technology, finance, lifestyle, entertainment, startups
+
+Key pages:
+- https://brandtroveglobal.com/
+- https://brandtroveglobal.com/services/
+- https://brandtroveglobal.com/case-studies/
+- https://brandtroveglobal.com/blog/
+- https://brandtroveglobal.com/contact/
+
+Social:
+- LinkedIn: https://www.linkedin.com/company/brandtroveglobal/
+- Instagram: https://www.instagram.com/brandtroveglobal/
+- X: https://x.com/brandtrove
+
+Sitemap: https://brandtroveglobal.com/sitemap.xml

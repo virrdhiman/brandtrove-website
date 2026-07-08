@@ -1,0 +1,28 @@
+/* TEAM */
+Brandtrove — Strategic Brand Partnerships
+Founder: Virender
+Location: Delhi, India
+Contact: info@brandtroveglobal.com
+Phone: +91 9817303991
+LinkedIn: https://www.linkedin.com/company/brandtroveglobal/
+Instagram: https://www.instagram.com/brandtroveglobal/
+X: https://x.com/brandtrove
+Facebook: https://www.facebook.com/brandtroveglobal/
+Productive IT — platform & technology partner (https://www.productiveit.co.in)
+Unsplash — stock photography (hero and section imagery)
+
+/* SITE */
+Last update: 2026-06-29
+Standards: HTML5, CSS3, WCAG 2.1 (target)
+Language: English (en-IN)
+Software: Astro 5, Node.js
+Hosting: VPS (nginx, Let's Encrypt SSL)
+Domain: brandtroveglobal.com
+
+/* DISCOVERY */
+Robots: https://brandtroveglobal.com/robots.txt
+Sitemap: https://brandtroveglobal.com/sitemap.xml
+LLM index: https://brandtroveglobal.com/llms.txt
+LLM full: https://brandtroveglobal.com/llms-full.txt
+AI policy: https://brandtroveglobal.com/ai.txt
+Security: https://brandtroveglobal.com/.well-known/security.txt

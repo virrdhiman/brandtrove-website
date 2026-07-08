@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { IMAGES } from '../data/images';
+---
+
+<Layout title="Influencer & Creator" description="Strategic influencer and creator collaborations for brands—data-driven campaigns across platforms and regions." path="/influencer-creator">
+  <PageHero eyebrow="Influencer & Creator" title="Collaborations That Drive Real Engagement" lead="Strategic, data-driven influencer campaigns designed to connect brands with the right audiences across platforms and regions." image={IMAGES.influencer} />
+
+  <section class="section"><div class="container prose">
+    <p>Influencer marketing today is about relevance, engagement, and measurable outcomes. Brandtrove designs collaborations aligned with brand positioning and audience behavior—selecting the right creators, structuring campaigns effectively, and delivering performance-driven results.</p>
+  </div></section>
+
+  <section class="section section-tight"><div class="container">
+    <h2>Our Creator Ecosystem</h2>
+    <div class="grid-4">
+      <article class="card"><h3>Digital Influencers</h3><p>Creators with strong engagement and niche authority.</p></article>
+      <article class="card"><h3>Regional Creators</h3><p>Localized influencers for deeper market connection.</p></article>
+      <article class="card"><h3>Emerging Creators</h3><p>High-growth creators with strong engagement and efficiency.</p></article>
+      <article class="card"><h3>Multi-Platform Campaigns</h3><p>Integrated campaigns across Instagram, YouTube, and short-form video.</p></article>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container">
+    <h2>How We Structure Influencer Campaigns</h2>
+    <div class="grid-2">
+      <div class="process-step"><div class="num">01</div><div><h3>Strategy & Planning</h3><p>Define goals, audience, and campaign objectives.</p></div></div>
+      <div class="process-step"><div class="num">02</div><div><h3>Creator Selection</h3><p>Match relevance, audience quality, and engagement.</p></div></div>
+      <div class="process-step"><div class="num">03</div><div><h3>Campaign Structuring</h3><p>Define deliverables, formats, and timelines.</p></div></div>
+      <div class="process-step"><div class="num">04</div><div><h3>Execution Management</h3><p>Coordinate content, approvals, and rollout.</p></div></div>
+      <div class="process-step"><div class="num">05</div><div><h3>Performance Tracking</h3><p>Measure engagement, reach, and effectiveness.</p></div></div>
+    </div>
+  </div></section>
+
+  <section class="section section-tight"><div class="container grid-2">
+    <div class="card"><h3>Types of Campaigns</h3><ul><li>Product promotions</li><li>Brand awareness campaigns</li><li>Performance-driven campaigns</li><li>Launch campaigns</li><li>Long-term creator partnerships</li></ul></div>
+    <div class="card"><h3>Why Influencer Marketing Works</h3><ul><li>Direct audience engagement</li><li>High trust and relatability</li><li>Scalable across regions</li><li>Strong performance tracking</li></ul></div>
+  </div></section>
+
+  <CtaBand title="Build high-impact influencer campaigns" />
+</Layout>

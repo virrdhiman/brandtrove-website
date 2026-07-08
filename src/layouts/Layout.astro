@@ -1,0 +1,153 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Analytics from '../components/Analytics.astro';
+import GtmNoScript from '../components/GtmNoScript.astro';
+import CookieConsent from '../components/CookieConsent.astro';
+import { SITE } from '../data/site';
+import { professionalServiceSchema } from '../utils/seo';
+
+interface Props {
+  title: string;
+  description?: string;
+  path?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  ogImage?: string;
+  jsonLd?: Record<string, unknown>[];
+}
+
+const {
+  title,
+  description = SITE.description,
+  path = '/',
+  type = 'website',
+  noindex = false,
+  ogImage = SITE.ogImage,
+  jsonLd = [],
+} = Astro.props;
+
+const canonical = new URL(path, SITE.url).href;
+const fullTitle = path === '/' ? `${SITE.name} | ${SITE.tagline}` : `${title} | ${SITE.name}`;
+const imageUrl = new URL(ogImage, SITE.url).href;
+const gscVerification = import.meta.env.PUBLIC_GSC_VERIFICATION;
+
+const schemas = [
+  professionalServiceSchema(),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE.name,
+    alternateName: 'Brandtrove Global',
+    url: SITE.url,
+    description: SITE.description,
+    inLanguage: 'en-IN',
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.name,
+      logo: { '@type': 'ImageObject', url: `${SITE.url}${SITE.logo}` },
+    },
+  },
+  ...jsonLd,
+];
+---
+
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={SITE.keywords} />
+    <meta name="author" content={SITE.name} />
+    <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'} />
+    <meta name="googlebot" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content="#000000" />
+    <meta name="geo.region" content="IN-DL" />
+    <meta name="geo.placename" content="Delhi" />
+    {gscVerification && <meta name="google-site-verification" content={gscVerification} />}
+
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={SITE.locale} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:alt" content={`${SITE.name} — ${SITE.tagline}`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@brandtrove" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <link rel="icon" href="/logo.png" type="image/png" sizes="any" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM site index" />
+    <link rel="alternate" type="text/plain" href="/llm.txt" title="LLM context (short)" />
+    <link rel="author" href="/humans.txt" />
+
+    {path === '/' && <link rel="preload" as="image" href={SITE.logo} fetchpriority="high" />}
+
+    {
+      schemas.map((schema) => (
+        <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+      ))
+    }
+    <Analytics />
+  </head>
+  <body>
+    <GtmNoScript />
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <Header />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer />
+    <CookieConsent />
+  </body>
+</html>
+
+<style is:global>
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 1rem;
+    z-index: 100;
+    padding: 0.75rem 1rem;
+    background: var(--brand-blue-deep);
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 700;
+  }
+
+  .skip-link:focus {
+    left: 1rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--brand-blue-light);
+    outline-offset: 3px;
+  }
+</style>

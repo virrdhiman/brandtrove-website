@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { IMAGES } from '../data/images';
+---
+
+<Layout title="Brand Partnerships" description="Strategic brand partnerships with athletes, celebrities, and creators—built on alignment, strategy, and measurable outcomes." path="/brand-partnerships">
+  <PageHero eyebrow="Brand Partnerships" title="Strategic Brand Partnerships That Drive Real Impact" lead="We design structured collaborations between brands and influential personalities—built on alignment, strategy, and measurable outcomes." image={IMAGES.entertainment} />
+
+  <section class="section"><div class="container prose">
+    <p>Brand partnerships today go beyond visibility—they are about relevance, credibility, and audience connection. Brandtrove approaches every collaboration as a strategic initiative integrated into your marketing and growth strategy.</p>
+  </div></section>
+
+  <section class="section section-tight"><div class="container">
+    <h2>Our Approach to Partnerships</h2>
+    <div class="grid-2">
+      <div class="process-step"><div class="num">01</div><div><h3>Strategic Alignment</h3><p>Understand brand identity, audience, and campaign objectives.</p></div></div>
+      <div class="process-step"><div class="num">02</div><div><h3>Talent Identification</h3><p>Identify personalities aligned with brand values and audience expectations.</p></div></div>
+      <div class="process-step"><div class="num">03</div><div><h3>Partnership Structuring</h3><p>Define deliverables, timelines, and usage with clarity.</p></div></div>
+      <div class="process-step"><div class="num">04</div><div><h3>Execution Management</h3><p>Manage the full campaign lifecycle with precision.</p></div></div>
+      <div class="process-step"><div class="num">05</div><div><h3>Performance Focus</h3><p>Align collaborations with engagement, reach, and brand impact.</p></div></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container grid-4">
+    <article class="card"><h3>Brand Endorsements</h3><p>Build credibility and market visibility.</p></article>
+    <article class="card"><h3>Campaign Collaborations</h3><p>Integrated campaigns across digital, media, and on-ground.</p></article>
+    <article class="card"><h3>Appearances & Associations</h3><p>Strategic presence for events, launches, and brand moments.</p></article>
+    <article class="card"><h3>Long-Term Partnerships</h3><p>Sustained collaborations for recall and long-term value.</p></article>
+  </div></section>
+
+  <CtaBand title="Build the right partnership for your brand" />
+</Layout>

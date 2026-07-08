@@ -1,0 +1,200 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { SITE } from '../data/site';
+import { IMAGES } from '../data/images';
+import { breadcrumbSchema } from '../utils/seo';
+
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Careers', path: '/careers' },
+];
+
+const values = [
+  {
+    title: 'Strategy over spectacle',
+    text: 'We build partnerships around business outcomes—not vanity metrics or short-term buzz.',
+  },
+  {
+    title: 'Execution excellence',
+    text: 'From talent alignment to campaign rollout, we own delivery with professionalism and accountability.',
+  },
+  {
+    title: 'Cultural fluency',
+    text: 'India-first insight with global standards—relevant for brands navigating sports, entertainment, and creator ecosystems.',
+  },
+];
+
+const roles = [
+  {
+    title: 'Partnership & Strategy',
+    text: 'Brand strategy, talent fit, campaign planning, and client advisory across sports, celebrity, and influencer engagements.',
+  },
+  {
+    title: 'Campaign & Operations',
+    text: 'End-to-end coordination—briefs, timelines, talent liaison, activations, and performance tracking.',
+  },
+  {
+    title: 'Business Development',
+    text: 'Relationship building with brands, agencies, and talent networks across FMCG, tech, finance, and lifestyle sectors.',
+  },
+];
+---
+
+<Layout
+  title="Careers"
+  description="Join Brandtrove—strategic brand partnerships across sports, celebrity, and influencer marketing. Hybrid workplace policy, Delhi HQ, India-first with global execution."
+  path="/careers"
+  jsonLd={[breadcrumbSchema(breadcrumbs)]}
+>
+  <PageHero
+    eyebrow="Careers"
+    title="Build Brands That Become Cultural Icons"
+    lead="Brandtrove is a lean, execution-focused team connecting premium brands with athletes, celebrities, and creators. If you thrive on strategy, relationships, and high-impact delivery—we want to hear from you."
+    image={IMAGES.strategy}
+  />
+  <div class="container breadcrumb-wrap">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <section class="section section-tight" id="workplace-policy">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Workplace Policy</span>
+        <h2>How We Work — Hybrid by Design</h2>
+        <p class="lead">
+          Hybrid at Brandtrove means flexible remote work for strategy, campaign planning, and client
+          coordination, combined with in-person meetings, activations, and talent engagements across
+          India. Our Delhi headquarters anchors the team; project needs—not fixed desk time—shape where
+          we work.
+        </p>
+      </div>
+      <div class="grid-2 policy-grid">
+        <article class="card">
+          <h3>Remote-friendly</h3>
+          <p>
+            Strategy sessions, planning, reporting, and digital coordination can be done remotely. We
+            trust outcomes over attendance and use clear milestones for accountability.
+          </p>
+        </article>
+        <article class="card">
+          <h3>In-person when it matters</h3>
+          <p>
+            Client meetings, talent briefings, event activations, and on-ground campaigns are in-person
+            when projects require. Partnership work is relationship-driven—we show up where impact
+            happens.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Pan-India mobility</h3>
+          <p>
+            Campaigns often span metros and regional markets. Travel for activations, talent meetings,
+            or client workshops is planned in advance and tied to project scope.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Collaboration standards</h3>
+          <p>
+            Responsive communication, documented handoffs, and respect for deadlines are non-negotiable
+            whether you work from Delhi, another city, or on the road.
+          </p>
+        </article>
+      </div>
+      <p class="policy-note">
+        Headquarters: {SITE.location} · Flexible arrangements are discussed during hiring and aligned
+        to role requirements.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head centered">
+        <span class="eyebrow">Culture</span>
+        <h2>What We Look For</h2>
+      </div>
+      <div class="grid-3">
+        {values.map((item) => (
+          <article class="card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Opportunities</span>
+        <h2>Where You Might Fit</h2>
+        <p class="lead">
+          We hire selectively as we scale. There may not always be an open listing—strong candidates
+          are welcome to introduce themselves.
+        </p>
+      </div>
+      <div class="grid-3">
+        {roles.map((role) => (
+          <article class="card">
+            <h3>{role.title}</h3>
+            <p>{role.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container apply-card card">
+      <h2>Express Your Interest</h2>
+      <p>
+        Send your CV and a short note on why Brandtrove—with relevant experience in partnerships,
+        sports, entertainment, influencer marketing, or brand strategy—to
+        <a href={`mailto:${SITE.email}?subject=Careers%20at%20Brandtrove`}>{SITE.email}</a>.
+      </p>
+      <p class="muted">We review every application and respond when there is a potential fit.</p>
+    </div>
+  </section>
+
+  <CtaBand
+    title="Building a brand partnership instead?"
+    text="For client inquiries, start a strategic partnership conversation."
+    href="/contact"
+    label="Contact Brandtrove"
+  />
+</Layout>
+
+<style>
+  .breadcrumb-wrap {
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+  }
+
+  .policy-grid {
+    margin-top: 1.5rem;
+  }
+
+  .policy-note {
+    margin-top: 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
+  .apply-card {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .apply-card h2 {
+    margin-top: 0;
+  }
+
+  .muted {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    margin-bottom: 0;
+  }
+</style>

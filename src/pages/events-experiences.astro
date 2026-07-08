@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { IMAGES } from '../data/images';
+---
+
+<Layout title="Events & Experiences" description="Brand events, activations, and experiential campaigns—end-to-end execution for audience engagement and lasting impact." path="/events-experiences">
+  <PageHero eyebrow="Events & Experiences" title="Events & Experiences That Bring Brands to Life" lead="End-to-end execution of high-impact brand events, activations, and experiential campaigns designed to engage audiences and create lasting impressions." image={IMAGES.events} />
+
+  <section class="section"><div class="container grid-4">
+    <article class="card"><h3>Brand Activations</h3><p>Immersive brand moments that drive trial and interaction.</p></article>
+    <article class="card"><h3>Corporate Events</h3><p>Structured experiences for teams, partners, and stakeholders.</p></article>
+    <article class="card"><h3>Product Launches</h3><p>Launch formats that spotlight your product story.</p></article>
+    <article class="card"><h3>Celebrity & Influencer Appearances</h3><p>Curated presence that amplifies brand visibility.</p></article>
+  </div></section>
+
+  <section class="section section-tight"><div class="container">
+    <h2>How We Execute</h2>
+    <div class="grid-2">
+      <div class="process-step"><div class="num">1</div><div><h3>Concept & Planning</h3><p>Define objective, audience experience, and strategy.</p></div></div>
+      <div class="process-step"><div class="num">2</div><div><h3>Talent & Experience Integration</h3><p>Align personalities and elements for engagement.</p></div></div>
+      <div class="process-step"><div class="num">3</div><div><h3>Production & Coordination</h3><p>Manage logistics, setup, and operations.</p></div></div>
+      <div class="process-step"><div class="num">4</div><div><h3>On-Ground Execution</h3><p>Seamless delivery with brand consistency.</p></div></div>
+      <div class="process-step"><div class="num">5</div><div><h3>Post-Event Impact</h3><p>Measure engagement, reach, and effectiveness.</p></div></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container grid-2">
+    <div>
+      <h2>Event Sponsorships & Strategic Associations</h2>
+      <p>We structure sponsorships focused on strategic alignment, audience relevance, and measurable brand impact—from opportunity sourcing to activation.</p>
+    </div>
+    <div>
+      <h2>Post-Event Engagement & Insights</h2>
+      <p>Performance measurement, content amplification, audience insights, and strategic feedback loops extend impact beyond the event day.</p>
+    </div>
+  </div></section>
+
+  <CtaBand title="Create experiences that define your brand" />
+</Layout>

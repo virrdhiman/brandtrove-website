@@ -1,0 +1,195 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroVisual from '../components/HeroVisual.astro';
+import VisualCard from '../components/VisualCard.astro';
+import SplitSection from '../components/SplitSection.astro';
+import FounderSection from '../components/FounderSection.astro';
+import Testimonials from '../components/Testimonials.astro';
+import CtaBand from '../components/CtaBand.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { IMAGES } from '../data/images';
+import { CASE_STUDIES } from '../data/case-studies';
+---
+
+<Layout
+  title="Home"
+  description="Brandtrove designs strategic collaborations between brands and athletes, celebrities, and influencers—building visibility, credibility, and cultural relevance."
+  path="/"
+>
+  <HeroVisual />
+
+  <div class="trust-bar">
+    <div class="container trust-grid">
+      <div class="trust-stat"><strong>Pan-India</strong><span>Regional execution</span></div>
+      <div class="trust-stat"><strong>End-to-end</strong><span>Strategy to activation</span></div>
+      <div class="trust-stat"><strong>Multi-sector</strong><span>FMCG · Tech · Finance</span></div>
+      <div class="trust-stat"><strong>Global reach</strong><span>Cross-border partnerships</span></div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head centered">
+        <span class="eyebrow">What We Do</span>
+        <h2>Partnerships That Move Brands Forward</h2>
+        <p class="lead">
+          We structure collaborations across sports, entertainment, and digital ecosystems—built for
+          alignment, execution, and measurable impact.
+        </p>
+      </div>
+      <div class="grid-2">
+        <VisualCard
+          image={IMAGES.sports}
+          alt="Sports brand collaboration"
+          title="Sports Collaborations"
+          description="Athlete partnerships, endorsements, and activations designed for credibility and fan connection."
+          href="/sports-collaborations"
+          tag="Sports"
+        />
+        <VisualCard
+          image={IMAGES.influencer}
+          alt="Influencer marketing campaign"
+          title="Influencer & Creator"
+          description="Data-driven creator campaigns across platforms and regions with measurable engagement."
+          href="/influencer-creator"
+          tag="Digital"
+        />
+        <VisualCard
+          image={IMAGES.entertainment}
+          alt="Entertainment brand partnership"
+          title="Brand Partnerships"
+          description="Celebrity and entertainment alliances aligned with brand positioning and audience relevance."
+          href="/brand-partnerships"
+          tag="Entertainment"
+        />
+        <VisualCard
+          image={IMAGES.events}
+          alt="Brand event activation"
+          title="Events & Experiences"
+          description="Launches, activations, and experiential campaigns that bring brands to life on-ground and online."
+          href="/events-experiences"
+          tag="Experiences"
+        />
+      </div>
+    </div>
+  </section>
+
+  <SplitSection
+    image={IMAGES.strategy}
+    alt="Strategic brand partnership planning"
+    eyebrow="Strategy First"
+    title="Bridging Brands and High-Impact Personalities"
+    description="We don't just connect talent—we structure complex deals, manage execution, and optimize performance for long-term brand equity."
+    href="/how-it-works"
+    linkLabel="See our process"
+  >
+    <ul>
+      <li>Discovery and brand-audience fit analysis</li>
+      <li>Deal structuring, timelines, and usage rights</li>
+      <li>End-to-end campaign coordination</li>
+    </ul>
+  </SplitSection>
+
+  <SplitSection
+    image={IMAGES.global}
+    alt="Global brand reach"
+    eyebrow="India-First, Global Scale"
+    title="Structured Collaborations Across Borders"
+    description="Pan-India execution with the capability to enable strategic cross-border partnerships through verified professional networks."
+    href="/global-reach"
+    linkLabel="Explore global reach"
+    reverse={true}
+  />
+
+  <section class="section process-section">
+    <div class="container grid-2">
+      <div>
+        <span class="eyebrow">How We Deliver</span>
+        <h2>A Clear Path From Idea to Impact</h2>
+        <p class="lead">Every engagement follows a structured framework—transparent, measurable, and built for long-term value.</p>
+        <div class="process-step" style="margin-top:1.5rem">
+          <div class="num">01</div>
+          <div><h3>Discovery</h3><p>Audit brand DNA, audience, and partnership objectives.</p></div>
+        </div>
+        <div class="process-step" style="margin-top:1rem">
+          <div class="num">02</div>
+          <div><h3>Strategy & Alignment</h3><p>Match the right talent and collaboration model.</p></div>
+        </div>
+        <div class="process-step" style="margin-top:1rem">
+          <div class="num">03</div>
+          <div><h3>Execution & Performance</h3><p>Deliver campaigns and track outcomes against goals.</p></div>
+        </div>
+        <a class="btn btn-secondary" href="/how-it-works" style="margin-top:1.5rem">Full process</a>
+      </div>
+      <div class="card" style="padding:0; overflow:hidden">
+        <img src={IMAGES.strategy} alt="Brandtrove strategic planning" loading="lazy" width="600" height="500" style="width:100%;height:100%;object-fit:cover;min-height:380px" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Why Brandtrove</span>
+        <h2>Built Like a Modern Partnership Firm</h2>
+      </div>
+      <div class="grid-4">
+        <article class="card"><h3>Curated Access</h3><p>Elite talent networks with relevant, high-impact partnership structures.</p></article>
+        <article class="card"><h3>Execution Capability</h3><p>End-to-end lifecycle management with measurable ROI focus.</p></article>
+        <article class="card"><h3>Pan-India Operations</h3><p>Localized execution across diverse regional audiences and markets.</p></article>
+        <article class="card"><h3>Performance Focus</h3><p>Data-driven models built on audience relevance and growth.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head centered">
+        <span class="eyebrow">Industries</span>
+        <h2>Partnerships Across Sectors</h2>
+      </div>
+      <div class="grid-3">
+        <article class="industry-pill"><h3>FMCG</h3><p>Mass reach through athletes, creators, and retail activations.</p></article>
+        <article class="industry-pill"><h3>Technology</h3><p>Credibility and adoption through visionary digital voices.</p></article>
+        <article class="industry-pill"><h3>Finance</h3><p>Trust-building through experts and respected personalities.</p></article>
+        <article class="industry-pill"><h3>Lifestyle</h3><p>Premium positioning via entertainment and celebrity networks.</p></article>
+        <article class="industry-pill"><h3>Entertainment</h3><p>Studio and regional industry partnership structuring.</p></article>
+        <article class="industry-pill"><h3>Startups</h3><p>Rapid visibility through strategic talent alignment.</p></article>
+      </div>
+      <p style="text-align:center;margin-top:2rem"><a class="text-link" href="/industries">View industry strategies →</a></p>
+    </div>
+  </section>
+
+  <FounderSection />
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head centered">
+        <span class="eyebrow">Case Studies</span>
+        <h2>Partnerships With Measurable Outcomes</h2>
+        <p class="lead">Structured programs across sports, creators, celebrities, and experiential activations.</p>
+      </div>
+      <div class="grid-2">
+        {
+          CASE_STUDIES.slice(0, 2).map((study) => (
+            <article class="card">
+              <span class="eyebrow">{study.category}</span>
+              <h3><a href={`/case-studies/${study.slug}`}>{study.title}</a></h3>
+              <p>{study.description}</p>
+              <a class="text-link" href={`/case-studies/${study.slug}`}>Read case study →</a>
+            </article>
+          ))
+        }
+      </div>
+      <p style="text-align:center;margin-top:2rem"><a class="text-link" href="/case-studies">View all case studies →</a></p>
+    </div>
+  </section>
+
+  <Testimonials />
+
+  <CtaBand
+    title="Let's build a partnership that drives visibility, credibility, and long-term brand growth."
+    text="Share your goals and we'll design a collaboration strategy aligned with your market."
+  />
+  <ContactForm />
+</Layout>

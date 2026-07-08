@@ -1,0 +1,17 @@
+{
+  "name": "brandtrove-website",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "assets": "node scripts/ensure-assets.mjs",
+    "assets:win": "powershell -ExecutionPolicy Bypass -File scripts/restore-assets.ps1",
+    "prebuild": "npm run assets",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.7.0"
+  }
+}

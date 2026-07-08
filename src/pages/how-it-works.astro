@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { IMAGES } from '../data/images';
+---
+
+<Layout title="How It Works" description="Brandtrove's end-to-end process for brand collaborations—from discovery and strategy to execution and performance tracking." path="/how-it-works">
+  <PageHero eyebrow="How It Works" title="From Strategy to Execution" lead="A structured approach to designing and delivering high-impact brand collaborations." image={IMAGES.strategy} />
+
+  <section class="section"><div class="container">
+    <h2>Our End-to-End Process</h2>
+    <div class="grid-2">
+      <div class="process-step"><div class="num">01</div><div><h3>Discovery & Requirements</h3><p>Understand brand, audience, goals, and expected outcomes.</p></div></div>
+      <div class="process-step"><div class="num">02</div><div><h3>Strategy & Planning</h3><p>Define partnership type, campaign approach, and impact.</p></div></div>
+      <div class="process-step"><div class="num">03</div><div><h3>Talent & Platform Alignment</h3><p>Identify athletes, celebrities, or creators through professional networks.</p></div></div>
+      <div class="process-step"><div class="num">04</div><div><h3>Proposal & Structuring</h3><p>Outline deliverables, timelines, and engagement formats.</p></div></div>
+      <div class="process-step"><div class="num">05</div><div><h3>Execution & Coordination</h3><p>Manage communication, coordination, and campaign rollout.</p></div></div>
+      <div class="process-step"><div class="num">06</div><div><h3>Performance Tracking</h3><p>Evaluate engagement, reach, and campaign outcomes.</p></div></div>
+      <div class="process-step"><div class="num">07</div><div><h3>Optimization & Continuity</h3><p>Refine future collaborations and build long-term value.</p></div></div>
+    </div>
+  </div></section>
+
+  <section class="section section-tight"><div class="container grid-3">
+    <article class="card"><h3>Sports Collaboration</h3><p>Athlete endorsement + digital amplification for visibility during high-engagement seasons.</p></article>
+    <article class="card"><h3>Influencer Campaign</h3><p>Regional creators and multi-platform rollout for product launch engagement.</p></article>
+    <article class="card"><h3>Event Activation</h3><p>Experiential setup with influencer participation and content amplification.</p></article>
+  </div></section>
+
+  <CtaBand title="Start your brand collaboration journey" />
+</Layout>

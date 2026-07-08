@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { IMAGES } from '../data/images';
+---
+
+<Layout title="Industries" description="Industry-specific brand partnership strategies for FMCG, technology, finance, lifestyle, entertainment, and startups." path="/industries">
+  <PageHero eyebrow="Industries" title="Strategic Partnerships Built for Every Sector" lead="Tailored collaborations aligned with industry dynamics, audience behavior, and business objectives." image={IMAGES.hero} />
+
+  <section class="section"><div class="container grid-2">
+    <article class="card">
+      <h3>FMCG</h3>
+      <p><strong>Approach:</strong> High-reach campaigns for mass visibility and frequent engagement.</p>
+      <p><strong>Use cases:</strong> Product promotions, influencer campaigns, retail activations.</p>
+      <p><strong>Value:</strong> Improved recall, higher engagement, rapid penetration.</p>
+    </article>
+    <article class="card">
+      <h3>Technology</h3>
+      <p><strong>Approach:</strong> Positioning-driven collaborations for trust and product understanding.</p>
+      <p><strong>Value:</strong> Enhanced credibility, better adoption, targeted reach.</p>
+    </article>
+    <article class="card">
+      <h3>Financial Services</h3>
+      <p><strong>Approach:</strong> Trust-focused collaborations that simplify complex messaging.</p>
+      <p><strong>Value:</strong> Stronger trust, improved perception, audience confidence.</p>
+    </article>
+    <article class="card">
+      <h3>Lifestyle, Entertainment & Startups</h3>
+      <p>Custom strategies for premium positioning, media partnerships, and growth-stage visibility.</p>
+    </article>
+  </div></section>
+
+  <section class="section section-tight"><div class="container grid-2">
+    <article class="card"><h3>Case: FMCG Campaign</h3><p>Multi-platform influencer campaign + retail activation for large-scale product awareness.</p></article>
+    <article class="card"><h3>Case: Technology Launch</h3><p>Strategic influencer selection and content-driven campaign for credibility and engagement.</p></article>
+  </div></section>
+
+  <CtaBand title="Tailored partnerships for your industry" />
+</Layout>

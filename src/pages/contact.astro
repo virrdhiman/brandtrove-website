@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import ContactForm from '../components/ContactForm.astro';
+import PoweredBy from '../components/PoweredBy.astro';
+import { SITE } from '../data/site';
+import { IMAGES } from '../data/images';
+---
+
+<Layout title="Contact" description="Contact Brandtrove to start a strategic brand partnership—inquiries for sports, celebrity, influencer, and global collaborations." path="/contact">
+  <PageHero eyebrow="Contact" title="Start Your Cultural Legacy" lead="We bridge premium brands and high-impact personalities. Share your requirements to initiate a strategic partnership." image={IMAGES.strategy} />
+
+  <section class="section"><div class="container grid-2">
+    <div>
+      <h2>Why Partner With Brandtrove</h2>
+      <article class="card" style="margin-bottom:1rem"><h3>Curated Access</h3><p>Elite talent through professional networks for high-impact visibility.</p></article>
+      <article class="card" style="margin-bottom:1rem"><h3>Execution Mastery</h3><p>End-to-end lifecycle management with measurable ROI.</p></article>
+      <article class="card"><h3>Global Scale</h3><p>Pan-India presence with structured cross-border capability.</p></article>
+    </div>
+    <div>
+      <h2>Ideal Partnerships</h2>
+      <ul>
+        <li>Global brands seeking cultural relevance in India</li>
+        <li>Enterprises launching sports or entertainment activations</li>
+        <li>Tech brands humanizing innovation through celebrity alignment</li>
+        <li>Growth-stage ventures ready for large-scale audience engagement</li>
+      </ul>
+      <h3 style="margin-top:2rem">Reach Us Directly</h3>
+      <p>
+        <a href={`tel:${SITE.phoneTel}`}>{SITE.phone}</a><br />
+        <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+      </p>
+      <PoweredBy />
+      <h3 style="margin-top:2rem">How It Starts</h3>
+      <ol>
+        <li>Submit your project inquiry</li>
+        <li>Strategic audit of brand and collaboration opportunities</li>
+        <li>Talent alignment with core values</li>
+        <li>Execution with ROI and performance milestones</li>
+      </ol>
+    </div>
+  </div></section>
+
+  <ContactForm />
+</Layout>

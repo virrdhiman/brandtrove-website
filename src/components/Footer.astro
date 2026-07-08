@@ -1,0 +1,125 @@
+---
+import { SITE, FOOTER_NAV } from '../data/site';
+import PoweredBy from './PoweredBy.astro';
+import SocialLinks from './SocialLinks.astro';
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <img src={SITE.logo} alt={`${SITE.name} logo`} class="footer-logo" width="200" height="80" />
+      <p>{SITE.description}</p>
+      <p class="contact-lines">
+        <a href={`mailto:${SITE.email}`}>{SITE.email}</a><br />
+        <a href={`tel:${SITE.phoneTel}`}>{SITE.phone}</a><br />
+        {SITE.location}
+      </p>
+      <SocialLinks />
+      <PoweredBy />
+    </div>
+    <div>
+      <h3>Services</h3>
+      <ul>
+        {FOOTER_NAV.services.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </div>
+    <div>
+      <h3>Company</h3>
+      <ul>
+        {FOOTER_NAV.company.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </div>
+    <div>
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="/terms-conditions">Terms & Conditions</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/cookie-policy">Cookie Policy</a></li>
+        <li><a href="/disclaimer">Disclaimer</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© {year} {SITE.legalName}. All rights reserved.</p>
+    <p>India-first strategy · Global execution capability</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: 4rem;
+    padding: 4rem 0 2rem;
+    background: #000;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .footer-logo {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .contact-lines {
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li + li {
+    margin-top: 0.45rem;
+  }
+
+  a {
+    color: var(--text-muted);
+  }
+
+  a:hover {
+    color: var(--brand-blue-light);
+  }
+
+  .footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 900px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

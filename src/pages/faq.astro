@@ -1,0 +1,111 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { breadcrumbSchema } from '../utils/seo';
+
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'FAQ', path: '/faq' },
+];
+
+const faqs = [
+  {
+    q: 'What types of partnerships does Brandtrove manage?',
+    a: 'We structure sports collaborations, celebrity and athlete endorsements, influencer and creator campaigns, brand partnerships, and experiential events—across India with global execution capability.',
+  },
+  {
+    q: 'Which industries do you work with?',
+    a: 'FMCG, technology, financial services, lifestyle, entertainment, and growth-stage startups are our core sectors. We tailor talent and channel strategy to category dynamics.',
+  },
+  {
+    q: 'How long does a typical engagement take?',
+    a: 'Discovery and strategy usually take 2–4 weeks. Campaign execution timelines depend on talent availability, rights negotiation, and activation scope—often 4–12 weeks from sign-off.',
+  },
+  {
+    q: 'Do you work with regional and vernacular markets?',
+    a: 'Yes. Pan-India execution includes Tier-2 and Tier-3 creator networks, regional sports talent, and localized content—critical for brands scaling beyond metro audiences.',
+  },
+  {
+    q: 'How do you measure partnership ROI?',
+    a: 'We align KPIs upfront: reach, engagement quality, sentiment, leads, conversions, and brand lift where applicable. Reporting cadence is defined in the strategy phase.',
+  },
+  {
+    q: 'What budget ranges do you typically handle?',
+    a: 'We work across partnership scales—from focused influencer activations to multi-crore sports and entertainment deals. Share your range in the inquiry form for a tailored approach.',
+  },
+  {
+    q: 'How do I start a project?',
+    a: 'Submit the partnership inquiry form on our contact page with your goals, industry, and timeline. Our team responds within 1–2 business days with next steps.',
+  },
+];
+---
+
+<Layout
+  title="FAQ"
+  description="Frequently asked questions about Brandtrove partnership services, industries, timelines, budgets, and how to start a collaboration."
+  path="/faq"
+  jsonLd={[
+    breadcrumbSchema(breadcrumbs),
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((item) => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a },
+      })),
+    },
+  ]}
+>
+  <PageHero
+    eyebrow="FAQ"
+    title="Frequently Asked Questions"
+    description="Answers about how Brandtrove designs and executes strategic brand partnerships."
+  />
+  <section class="section section-tight">
+    <div class="container prose faq-list">
+      <Breadcrumbs items={breadcrumbs} />
+      {
+        faqs.map((item) => (
+          <details class="faq-item">
+            <summary>{item.q}</summary>
+            <p>{item.a}</p>
+          </details>
+        ))
+      }
+    </div>
+  </section>
+  <CtaBand title="Still have questions? Start a project inquiry." />
+</Layout>
+
+<style>
+  .faq-list {
+    max-width: 780px;
+  }
+
+  .faq-item {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.75rem;
+    background: var(--bg-elevated);
+  }
+
+  .faq-item summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text);
+    list-style: none;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item p {
+    margin: 0.75rem 0 0;
+    color: var(--text-muted);
+  }
+</style>

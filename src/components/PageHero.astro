@@ -1,0 +1,24 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  lead?: string;
+  image?: string;
+}
+
+const { eyebrow, title, lead, image } = Astro.props;
+---
+
+<section class:list={['page-hero', { 'has-image': !!image }]}>
+  {image && (
+    <div class="page-hero-bg" aria-hidden="true">
+      <img src={image} alt="" loading="eager" width="1920" height="600" />
+      <div class="page-hero-overlay"></div>
+    </div>
+  )}
+  <div class="container">
+    {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+    <h1>{title}</h1>
+    {lead && <p class="lead">{lead}</p>}
+  </div>
+</section>

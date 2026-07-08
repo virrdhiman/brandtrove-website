@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import { SITE } from '../data/site';
+---
+
+<Layout title="Cookie Policy" description="Brandtrove Cookie Policy—how we use cookies and similar technologies on our website." path="/cookie-policy">
+  <PageHero title="Cookie Policy" lead="How Brandtrove uses cookies and similar tracking technologies." />
+
+  <section class="section legal"><div class="container prose">
+    <p class="legal-updated">Last updated: {SITE.legalUpdated}</p>
+    <p>Brandtrove uses cookies and similar technologies to improve website functionality, remember preferences, and understand how visitors use our content.</p>
+
+    <h2>Types of Cookies We Use</h2>
+    <ul>
+      <li><strong>Essential cookies</strong> — Required for core site features and security.</li>
+      <li><strong>Functionality cookies</strong> — Remember preferences such as form inputs during a session.</li>
+      <li><strong>Analytics cookies</strong> — Help us understand traffic patterns and improve content (if enabled).</li>
+    </ul>
+
+    <h2>Managing Cookies</h2>
+    <p>You can adjust browser settings to refuse cookies or alert you when cookies are sent. Disabling cookies may limit some site features.</p>
+
+    <h2>Third-Party Services</h2>
+    <p>If we embed analytics or communication tools, those providers may set their own cookies governed by their policies.</p>
+
+    <h2>Contact</h2>
+    <p>Questions: <a href={`mailto:${SITE.privacyEmail}`}>{SITE.privacyEmail}</a></p>
+  </div></section>
+</Layout>

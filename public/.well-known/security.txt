@@ -1,0 +1,10 @@
+Contact: mailto:info@brandtroveglobal.com
+Contact: tel:+91-9817303991
+Contact: mailto:privacy@brandtroveglobal.com
+Expires: 2027-06-29T00:00:00.000Z
+Preferred-Languages: en, hi
+Canonical: https://brandtroveglobal.com/.well-known/security.txt
+Policy: https://brandtroveglobal.com/privacy-policy/
+
+# Brandtrove security contact
+# Please report vulnerabilities responsibly to info@brandtroveglobal.com

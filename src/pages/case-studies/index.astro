@@ -1,0 +1,118 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { CASE_STUDIES } from '../../data/case-studies';
+import { breadcrumbSchema } from '../../utils/seo';
+
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Case Studies', path: '/case-studies' },
+];
+---
+
+<Layout
+  title="Case Studies"
+  description="Brand partnership case studies — sports collaborations, influencer programs, celebrity endorsements, and experiential brand activations across India."
+  path="/case-studies"
+  jsonLd={[breadcrumbSchema(breadcrumbs)]}
+>
+  <section class="section">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <div class="section-head">
+        <span class="eyebrow">Proven Impact</span>
+        <h1>Case Studies</h1>
+        <p class="lead">
+          Structured collaborations across sports, creators, celebrities, and experiential campaigns — built for alignment, execution, and measurable brand outcomes.
+        </p>
+      </div>
+      <div class="grid-2">
+        {
+          CASE_STUDIES.map((study) => (
+            <article class="card case-card">
+              {study.image && (
+                <a href={`/case-studies/${study.slug}`} class="case-thumb">
+                  <img src={study.image} alt="" loading="lazy" width="600" height="340" />
+                </a>
+              )}
+              <span class="eyebrow">{study.category}</span>
+              <h2><a href={`/case-studies/${study.slug}`}>{study.title}</a></h2>
+              <p>{study.description}</p>
+              <div class="metrics-row">
+                {study.metrics.map((m) => (
+                  <div class="metric-pill">
+                    <strong>{m.value}</strong>
+                    <span>{m.label}</span>
+                  </div>
+                ))}
+              </div>
+              <a class="text-link" href={`/case-studies/${study.slug}`}>Read case study →</a>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+  <CtaBand title="Discuss a partnership strategy for your brand" />
+</Layout>
+
+<style>
+  .case-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .case-card > :not(.case-thumb) {
+    padding-inline: 1.35rem;
+  }
+
+  .case-card > .text-link {
+    padding-bottom: 1.35rem;
+  }
+
+  .case-thumb {
+    display: block;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+
+  .case-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+  }
+
+  .case-card:hover .case-thumb img {
+    transform: scale(1.03);
+  }
+
+  .metrics-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.35rem 0 0.5rem;
+  }
+
+  .metric-pill {
+    padding: 0.45rem 0.65rem;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: rgba(58, 143, 212, 0.08);
+    font-size: 0.78rem;
+  }
+
+  .metric-pill strong {
+    display: block;
+    color: var(--brand-blue-light);
+    font-size: 0.85rem;
+  }
+
+  .metric-pill span {
+    color: var(--text-muted);
+  }
+</style>

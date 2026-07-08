@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import { SITE } from '../data/site';
+---
+
+<Layout title="Disclaimer" description="Brandtrove legal disclaimer for website content and strategic brand partnership services." path="/disclaimer">
+  <PageHero title="Disclaimer" lead="Important information about Brandtrove services, content, and third-party involvement." />
+
+  <section class="section legal"><div class="container prose">
+    <p class="legal-updated">Last updated: {SITE.legalUpdated}</p>
+    <h2>1. General Information</h2>
+    <p>Information on this website and through Brandtrove services is for general informational purposes. Services are provided on an "as is" and "as available" basis without warranty of any kind.</p>
+
+    <h2>2. No Guarantee of Results</h2>
+    <p>Brandtrove does not guarantee specific business outcomes, ROI, or audience growth. Case studies are illustrative and do not guarantee future success.</p>
+
+    <h2>3. Third-Party Involvement</h2>
+    <p>Brandtrove acts as a strategic intermediary between brands and talent. We are not responsible for personal conduct or contractual defaults of third parties.</p>
+
+    <h2>4. Representation Disclaimer</h2>
+    <p>Unless explicitly stated in a legal agreement, Brandtrove does not hold exclusive legal representation over talent we collaborate with.</p>
+
+    <h2>5. Content & Media Usage</h2>
+    <p>Names, images, and likenesses displayed are property of respective owners. Unauthorized use is prohibited without explicit written consent.</p>
+
+    <h2>6. No Professional Relationship</h2>
+    <p>Browsing this site or submitting an inquiry does not create a formal agency-client relationship until a signed services agreement is executed.</p>
+
+    <h2>7. Limitation of Liability</h2>
+    <p>To the maximum extent permitted by law, Brandtrove shall not be liable for direct or indirect damages arising from use of site services or campaign participation.</p>
+
+    <h2>8. External Links</h2>
+    <p>Third-party links are provided for convenience. Brandtrove does not control or endorse external site content or privacy practices.</p>
+
+    <h2>9. Contact</h2>
+    <p>Questions: <a href={`mailto:${SITE.email}`}>{SITE.email}</a> · {SITE.location}</p>
+  </div></section>
+</Layout>

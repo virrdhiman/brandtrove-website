@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { IMAGES } from '../data/images';
+---
+
+<Layout title="Sports Collaborations" description="Sports collaborations for brands—athlete partnerships, endorsements, activations, and performance-focused campaigns." path="/sports-collaborations">
+  <PageHero eyebrow="Sports Collaborations" title="Sports Collaborations That Drive Brand Performance" lead="Connect your brand with athletes and sporting ecosystems through structured partnerships for visibility, credibility, and long-term recall." image={IMAGES.sports} />
+
+  <section class="section"><div class="container grid-4">
+    <article class="card"><h3>Athlete Alignment</h3><p>Talent selection based on audience fit, brand values, and campaign objectives.</p></article>
+    <article class="card"><h3>Campaign Activation</h3><p>Endorsements, events, digital content, and on-ground activations.</p></article>
+    <article class="card"><h3>Brand Visibility</h3><p>Sports-led storytelling for reach, recall, and emotional connection.</p></article>
+    <article class="card"><h3>Performance Focus</h3><p>Measurable outcomes, review points, and post-campaign learning.</p></article>
+  </div></section>
+
+  <section class="section section-tight"><div class="container">
+    <h2>Sports Partnership Ecosystem</h2>
+    <div class="grid-4">
+      <article class="card"><h3>Cricket</h3><p>Partnerships from international stars to emerging domestic talent.</p></article>
+      <article class="card"><h3>Olympic & Professional Sports</h3><p>Javelin, wrestling, badminton, football, tennis, kabaddi, and more.</p></article>
+      <article class="card"><h3>Emerging Athletes</h3><p>Early-mover advantages with high authenticity and long-term synergy.</p></article>
+      <article class="card"><h3>Multi-Sport Campaigns</h3><p>Holistic campaigns focused on fitness, discipline, and national pride.</p></article>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container">
+    <h2>Types of Sports Collaborations</h2>
+    <div class="grid-3">
+      <article class="card"><h3>Brand Endorsements</h3><p>Long-term face-of-the-brand associations.</p></article>
+      <article class="card"><h3>Campaign Collaborations</h3><p>Objective-led partnerships for launches and seasons.</p></article>
+      <article class="card"><h3>Event Appearances</h3><p>Store launches, summits, and award ceremonies.</p></article>
+      <article class="card"><h3>Long-Term Associations</h3><p>Recurring digital and social advocacy.</p></article>
+      <article class="card"><h3>Digital & Social Campaigns</h3><p>Athlete-led training and lifestyle content.</p></article>
+      <article class="card"><h3>Sponsorship Activations</h3><p>Fan engagement and on-ground presence.</p></article>
+    </div>
+  </div></section>
+
+  <section class="section section-tight"><div class="container">
+    <h2>Our Sports Collaboration Process</h2>
+    <div class="grid-2">
+      <div class="process-step"><div class="num">01</div><div><h3>Discovery & Brand Objective</h3><p>Understand goals, market segment, and trust-building needs.</p></div></div>
+      <div class="process-step"><div class="num">02</div><div><h3>Athlete Shortlisting</h3><p>Audience metrics, brand safety, and athletic relevance.</p></div></div>
+      <div class="process-step"><div class="num">03</div><div><h3>Partnership Structuring</h3><p>Usage rights, scope, timelines, and contractual clarity.</p></div></div>
+      <div class="process-step"><div class="num">04</div><div><h3>Campaign Execution</h3><p>Content production, appearances, and event coordination.</p></div></div>
+      <div class="process-step"><div class="num">05</div><div><h3>Performance Review</h3><p>Reach, sentiment, and effectiveness against objectives.</p></div></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container prose">
+    <p><strong>Professional Disclaimer:</strong> Brandtrove is a strategic consultancy. We facilitate collaboration planning, fitment evaluation, and execution coordination. Final feasibility is subject to talent availability, approvals, usage rights, and campaign timelines.</p>
+    <p><a href="/blog">View sports partnership insights →</a></p>
+  </div></section>
+
+  <CtaBand title="Build high-impact sports collaborations" href="/contact" />
+</Layout>

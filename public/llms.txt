@@ -1,0 +1,60 @@
+# Brandtrove
+
+> Brandtrove designs and executes strategic collaborations between brands and athletes, celebrities, and influencers—building visibility, credibility, and cultural relevance across India and global markets.
+
+Brandtrove (https://brandtroveglobal.com) is a strategic brand partnerships agency headquartered in Delhi, India. We structure sports collaborations, celebrity endorsements, influencer campaigns, brand partnerships, and experiential activations for FMCG, technology, finance, lifestyle, entertainment, and growth-stage brands.
+
+Contact: info@brandtroveglobal.com | Phone: +91 9817303991
+
+For complete structured content, see https://brandtroveglobal.com/llms-full.txt
+
+## Services
+
+- [Sports Collaborations](https://brandtroveglobal.com/sports-collaborations/): Athlete partnerships, endorsements, league tie-ups, and sports activations
+- [Influencer & Creator](https://brandtroveglobal.com/influencer-creator/): Data-driven creator campaigns across platforms and Indian regional markets
+- [Brand Partnerships](https://brandtroveglobal.com/brand-partnerships/): Celebrity and entertainment alliances aligned with brand positioning
+- [Events & Experiences](https://brandtroveglobal.com/events-experiences/): Launches, hybrid activations, and experiential brand campaigns
+- [All Services](https://brandtroveglobal.com/services/): Overview of partnership capabilities and engagement models
+
+## Company
+
+- [About Brandtrove](https://brandtroveglobal.com/about/): Mission, vision, values, and partnership philosophy
+- [How It Works](https://brandtroveglobal.com/how-it-works/): Discovery, strategy, execution, and performance framework
+- [Industries](https://brandtroveglobal.com/industries/): Sector-specific partnership strategies (FMCG, tech, finance, lifestyle)
+- [Global Reach](https://brandtroveglobal.com/global-reach/): Pan-India execution with cross-border partnership capability
+- [Case Studies](https://brandtroveglobal.com/case-studies/): Partnership programs with measurable outcomes
+- [FAQ](https://brandtroveglobal.com/faq/): Common questions about services, timelines, budgets, and engagement
+- [Contact](https://brandtroveglobal.com/contact/): Start a strategic partnership inquiry
+
+## Case Studies
+
+- [FMCG Cricket Season Campaign](https://brandtroveglobal.com/case-studies/fmcg-cricket-season-campaign/): Regional recall at scale through structured sports partnerships
+- [Regional Creator Program — D2C](https://brandtroveglobal.com/case-studies/regional-influencer-d2c-scale/): Tier-2/3 creator scale with governance and KPIs
+- [Celebrity Endorsement Restructure](https://brandtroveglobal.com/case-studies/celebrity-fit-endorsement-restructure/): Fit-over-fame partnership architecture
+- [Hybrid Tech Product Launch](https://brandtroveglobal.com/case-studies/hybrid-tech-product-launch/): Integrated event + digital activation
+
+## Insights (12 Articles)
+
+- [Blog & Insights](https://brandtroveglobal.com/blog/): Articles on sports marketing, influencer strategy, and brand partnerships in India
+- [Cricket Partnerships in India](https://brandtroveglobal.com/blog/cricket-partnerships-brand-growth-india/)
+- [Regional Influencers](https://brandtroveglobal.com/blog/regional-influencers-india-brand-asset/)
+- [Brand-Athlete Fit](https://brandtroveglobal.com/blog/brand-athlete-fit-over-popularity/)
+- [Creator Economy & Brand Partnerships](https://brandtroveglobal.com/blog/creator-economy-brand-partnerships-india/)
+- [Celebrity-Brand Fit](https://brandtroveglobal.com/blog/celebrity-brand-fit-over-star-power/)
+- [FMCG D2C Influencer Strategies](https://brandtroveglobal.com/blog/fmcg-d2c-influencer-strategies/)
+- [Hybrid Event Strategies](https://brandtroveglobal.com/blog/hybrid-event-strategies-2026/)
+- [Fan Engagement in Sports](https://brandtroveglobal.com/blog/fan-engagement-sports-partnerships/)
+- [Multi-Channel Consistency](https://brandtroveglobal.com/blog/multi-channel-campaign-consistency/)
+- [Emerging Athletes & Brand Building](https://brandtroveglobal.com/blog/emerging-athletes-long-term-brand-building/)
+- [Sports Activations & Recall](https://brandtroveglobal.com/blog/sports-activations-brand-recall/)
+- [Sports Partnerships & Trust](https://brandtroveglobal.com/blog/sports-partnerships-build-trust/)
+
+## Optional
+
+- [Privacy Policy](https://brandtroveglobal.com/privacy-policy/)
+- [Terms & Conditions](https://brandtroveglobal.com/terms-conditions/)
+- [Cookie Policy](https://brandtroveglobal.com/cookie-policy/)
+- [Disclaimer](https://brandtroveglobal.com/disclaimer/)
+- [humans.txt](https://brandtroveglobal.com/humans.txt)
+- [llm.txt](https://brandtroveglobal.com/llm.txt) — short LLM context
+- [security.txt](https://brandtroveglobal.com/.well-known/security.txt)

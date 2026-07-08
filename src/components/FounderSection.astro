@@ -1,0 +1,106 @@
+---
+import { FOUNDER, IMAGES } from '../data/images';
+---
+
+<section class="founder-section section">
+  <div class="container founder-grid">
+    <div class="founder-visual">
+      <div class="founder-frame">
+        <img
+          src={IMAGES.founder}
+          alt={`${FOUNDER.name}, ${FOUNDER.title}`}
+          width="520"
+          height="650"
+          loading="lazy"
+        />
+      </div>
+      <div class="founder-badge">
+        <span class="eyebrow">Leadership</span>
+        <strong>{FOUNDER.name}</strong>
+        <p>{FOUNDER.title}</p>
+      </div>
+    </div>
+    <div class="founder-copy">
+      <span class="eyebrow">Meet the Founder</span>
+      <h2>{FOUNDER.name}</h2>
+      <p class="role">{FOUNDER.role}</p>
+      {FOUNDER.bio.map((paragraph) => <p>{paragraph}</p>)}
+      <a class="btn btn-primary" href="/contact">Work With Brandtrove</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .founder-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .founder-frame {
+    border-radius: calc(var(--radius) + 8px);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow), 0 0 0 1px rgba(94, 179, 240, 0.1);
+    position: relative;
+  }
+
+  .founder-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.75));
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .founder-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 420px;
+  }
+
+  .founder-badge {
+    position: absolute;
+    left: 1.25rem;
+    bottom: 1.25rem;
+    z-index: 2;
+    padding: 1rem 1.15rem;
+    border-radius: 14px;
+    background: rgba(0, 0, 0, 0.72);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(8px);
+  }
+
+  .founder-badge strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    color: var(--brand-blue-light);
+  }
+
+  .founder-badge p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .founder-visual {
+    position: relative;
+  }
+
+  .role {
+    color: var(--productive-green) !important;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 900px) {
+    .founder-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

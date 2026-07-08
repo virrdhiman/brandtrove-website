@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import { SITE } from '../data/site';
+---
+
+<Layout title="Terms & Conditions" description="Brandtrove Terms and Conditions governing use of our website and strategic partnership services." path="/terms-conditions">
+  <PageHero title="Terms & Conditions" lead="Terms governing your engagement with Brandtrove and use of our services." />
+
+  <section class="section legal"><div class="container prose">
+    <p class="legal-updated">Last updated: {SITE.legalUpdated}</p>
+    <h2>Introduction</h2>
+    <p>Welcome to Brandtrove. These Terms and Conditions govern your relationship with Brandtrove and use of our strategic brand partnership services. By engaging Brandtrove, you agree to these terms.</p>
+
+    <h2>Services Provided</h2>
+    <p>Brandtrove provides strategic brand management, partnership facilitation, and collaboration execution across sports, entertainment, and digital ecosystems—including talent discovery, deal structuring, campaign management, and performance tracking.</p>
+
+    <h2>Payments & Engagement</h2>
+    <ul>
+      <li>Engagements are confirmed upon execution of a formal contract.</li>
+      <li>Payment schedules are defined per project.</li>
+      <li>Scope changes may affect fees and timelines.</li>
+    </ul>
+
+    <h2>Cancellations & Modifications</h2>
+    <p>Cancellation or modification requests must be submitted in writing. Clients are responsible for work performed and non-cancelable commitments up to the termination date unless otherwise agreed.</p>
+
+    <h2>Intellectual Property</h2>
+    <p>Materials and strategies developed by Brandtrove remain Brandtrove property until contractual obligations and payments are fulfilled, unless otherwise specified in writing.</p>
+
+    <h2>Limitation of Liability</h2>
+    <p>Brandtrove is not liable for indirect or consequential damages arising from use of our services. We facilitate collaborations but cannot guarantee specific commercial results from third-party talent performance.</p>
+
+    <h2>Confidentiality</h2>
+    <p>Both parties agree to maintain confidentiality of non-public business information disclosed during engagement.</p>
+
+    <h2>Governing Law</h2>
+    <p>These terms are governed by the laws of India. Disputes are subject to the exclusive jurisdiction of courts in Delhi, India.</p>
+
+    <h2>Contact</h2>
+    <p>Questions: <a href={`mailto:${SITE.email}`}>{SITE.email}</a> · {SITE.phone} · {SITE.location}</p>
+  </div></section>
+</Layout>
