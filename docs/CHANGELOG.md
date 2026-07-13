@@ -1,6 +1,6 @@
 # Changelog — Brandtrove Website
 
-All notable changes to `primary/brandtrove-website` (local) / `brandtrove-website` (in [virrdhiman/Primary](https://github.com/virrdhiman/Primary)).
+All notable changes to `personal/brandtrove-website` (local) / `brandtrove-website` (in [virrdhiman/Primary](https://github.com/virrdhiman/Primary)).
 
 ## 2026-06-29 — Production release
 

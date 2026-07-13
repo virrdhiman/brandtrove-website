@@ -43,7 +43,7 @@ Set up email on your domain when ready (e.g. `info@brandtroveglobal.com`) in `sr
 ## Local development
 
 ```bash
-cd primary/brandtrove-website
+cd personal/brandtrove-website
 npm install
 npm run dev
 ```
@@ -72,7 +72,7 @@ Output is in `dist/`.
 
 ```bash
 # Copy project to server (example)
-scp -r primary/brandtrove-website root@YOUR_VPS:/opt/brandtrove-website
+scp -r personal/brandtrove-website root@YOUR_VPS:/opt/brandtrove-website
 
 ssh root@YOUR_VPS
 cd /opt/brandtrove-website
@@ -95,7 +95,7 @@ This site runs as **static files** on nginx — it does not conflict with your F
 | [docs/CONTENT-GUIDE.md](docs/CONTENT-GUIDE.md) | How to edit copy, blog, images |
 | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Project layout and deployment model |
 
-**GitHub:** This folder lives in [virrdhiman/Primary](https://github.com/virrdhiman/Primary) as `brandtrove-website/` (personal account, not FlightPath org). Local path: `Programs/primary/brandtrove-website/`.
+**GitHub:** Standalone repo: [virrdhiman/brandtrove-website](https://github.com/virrdhiman/brandtrove-website). Local path: `Programs/personal/brandtrove-website/`.
 
 ## Customize
 

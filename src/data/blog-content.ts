@@ -275,6 +275,50 @@ The highest ROI often comes from multi-quarter creator relationships where audie
 ## What Brandtrove builds
 
 We design creator partnership architectures—talent selection, deal terms, content systems, and reporting—so influencer spend behaves like a brand asset, not a media buy.`,
+
+  'brand-safety-influencer-campaigns-india': `Influencer campaigns in India scale fast — and so do the risks. Brand safety is not a legal afterthought; it is the operating system that lets you grow creator programs without waking up to a reputation problem.
+
+## Vet people, not just follower counts
+
+Look at comment culture, past brand conflicts, political and category sensitivity, and how the creator behaves under pressure. A high engagement rate with hostile or off-brand comment threads is a warning, not a win.
+
+## Write the rules before the brief
+
+Category exclusions, disclosure norms, competitor mentions, and escalation paths should live in the contract and the content checklist. Creators move quickly; ambiguity is what creates screenshots you cannot control.
+
+## Keep a human in the approval loop
+
+Automated scanning helps. Final judgment still needs a person who understands your brand voice and current news cycle. Build a 24–48 hour approval SLA for planned posts and a faster path for live moments.
+
+## Plan for the bad day
+
+Who pauses paid amplification? Who speaks first — brand, agency, or talent? Who archives the evidence? Brands that rehearse this once recover faster than brands that invent policy mid-crisis.
+
+## Scale with tiers
+
+Entry-level creators can run on lighter review. Hero creators and always-on ambassadors need deeper diligence and tighter rights. Brandtrove designs those tiers so safety grows with spend — not after an incident.`,
+
+  'sports-sponsorship-roi-beyond-impressions': `Sports sponsorships get sold on reach. They get judged on whether sales, consideration, or brand love moved. Impressions are a starting metric — not a scorecard.
+
+## Separate exposure from effect
+
+Logo seconds and social views tell you the audience saw something. Brand lift, search interest, retail footfall, and assisted conversions tell you whether it mattered. Track both, but report effect to leadership.
+
+## Tie rights to a job
+
+Is the sponsorship meant to build awareness in a new state, drive trial in a season window, or deepen loyalty with existing fans? One primary job beats a vague “presence” brief. Activation design follows that job.
+
+## Build a before/after frame
+
+Baseline category tracking, competitive share of voice, and a control market where possible. Without a baseline, every post-campaign chart becomes storytelling.
+
+## Count the full stack
+
+Media value of rights, on-ground activation cost, talent fees, content production, and staff time. ROI conversations fail when finance only sees the rights line and marketing only sees the highlight reel.
+
+## Review on a calendar, not a vibe
+
+Quarterly partnership reviews with agreed KPIs keep sports deals honest. Renew, resize, or exit based on evidence. Brandtrove structures sponsorships so measurement is part of the deal — not a slide made after the season ends.`,
 };
 
 export function getBlogContent(slug: string, fallbackDescription: string): string {

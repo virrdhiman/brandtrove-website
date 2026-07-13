@@ -12,7 +12,7 @@ Wix content (source)  →  Astro pages + data  →  npm run build  →  dist/  �
 
 | Location | Path |
 |----------|------|
-| On your PC | `Programs/primary/brandtrove-website/` |
+| On your PC | `Programs/personal/brandtrove-website/` |
 | GitHub (personal) | [virrdhiman/Primary](https://github.com/virrdhiman/Primary) → `brandtrove-website/` |
 
 This project is stored under your **virrdhiman** account, not the FlightPath organization.

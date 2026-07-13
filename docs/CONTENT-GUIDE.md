@@ -59,7 +59,7 @@ Use `{SITE.legalName}` and `{SITE.domain}` so legal text stays in sync with `sit
 ## Preview
 
 ```powershell
-cd primary\brandtrove-website
+cd personal\brandtrove-website
 npm install
 npm run dev
 ```

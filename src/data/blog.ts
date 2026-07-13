@@ -130,6 +130,26 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '6 min read',
     image: '/images/influencer.jpg',
   },
+  {
+    slug: 'brand-safety-influencer-campaigns-india',
+    title: 'Brand Safety in Influencer Campaigns: What Indian Marketers Miss',
+    description: 'Audience fit and content rights matter — but brand safety systems are what keep influencer scale from becoming a reputation event.',
+    category: 'Influencer & Creator Marketing',
+    author: 'Virender',
+    date: '2026-07-10',
+    readTime: '5 min read',
+    image: '/images/influencer.jpg',
+  },
+  {
+    slug: 'sports-sponsorship-roi-beyond-impressions',
+    title: 'Sports Sponsorship ROI Beyond Impressions',
+    description: 'Impressions are easy. Sponsorship value is not. A practical framework for measuring sports partnerships against brand and business goals.',
+    category: 'Sports Partnerships',
+    author: 'Virender',
+    date: '2026-07-12',
+    readTime: '5 min read',
+    image: '/images/sports.jpg',
+  },
 ];
 
 export function getPost(slug: string) {
