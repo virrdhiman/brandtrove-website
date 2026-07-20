@@ -3,19 +3,26 @@ import Layout from '../../layouts/Layout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CtaBand from '../../components/CtaBand.astro';
 import { CASE_STUDIES } from '../../data/case-studies';
-import { breadcrumbSchema } from '../../utils/seo';
+import { SITE } from '../../data/site';
+import { breadcrumbSchema, itemListSchema } from '../../utils/seo';
 
 const breadcrumbs = [
   { name: 'Home', path: '/' },
   { name: 'Case Studies', path: '/case-studies' },
 ];
+const itemList = itemListSchema(
+  CASE_STUDIES.map((study) => ({
+    name: study.title,
+    url: new URL(`/case-studies/${study.slug}`, SITE.url).href,
+  }))
+);
 ---
 
 <Layout
   title="Case Studies"
   description="Brand partnership case studies — sports collaborations, influencer programs, celebrity endorsements, and experiential brand activations across India."
   path="/case-studies"
-  jsonLd={[breadcrumbSchema(breadcrumbs)]}
+  jsonLd={[breadcrumbSchema(breadcrumbs), itemList]}
 >
   <section class="section">
     <div class="container">
@@ -33,7 +40,7 @@ const breadcrumbs = [
             <article class="card case-card">
               {study.image && (
                 <a href={`/case-studies/${study.slug}`} class="case-thumb">
-                  <img src={study.image} alt="" loading="lazy" width="600" height="340" />
+                  <img src={study.image} alt={study.title} loading="lazy" width="600" height="340" />
                 </a>
               )}
               <span class="eyebrow">{study.category}</span>

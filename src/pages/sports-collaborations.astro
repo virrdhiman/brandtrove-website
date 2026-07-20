@@ -3,9 +3,12 @@ import Layout from '../layouts/Layout.astro';
 import PageHero from '../components/PageHero.astro';
 import CtaBand from '../components/CtaBand.astro';
 import { IMAGES } from '../data/images';
+import { serviceSchema } from '../utils/seo';
+
+const description = 'Sports collaborations for brands—athlete partnerships, endorsements, activations, and performance-focused campaigns.';
 ---
 
-<Layout title="Sports Collaborations" description="Sports collaborations for brands—athlete partnerships, endorsements, activations, and performance-focused campaigns." path="/sports-collaborations">
+<Layout title="Sports Collaborations" description={description} path="/sports-collaborations" jsonLd={[serviceSchema('Sports Collaborations', description, '/sports-collaborations')]}>
   <PageHero eyebrow="Sports Collaborations" title="Sports Collaborations That Drive Brand Performance" lead="Connect your brand with athletes and sporting ecosystems through structured partnerships for visibility, credibility, and long-term recall." image={IMAGES.sports} />
 
   <section class="section"><div class="container grid-4">

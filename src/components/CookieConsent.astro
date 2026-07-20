@@ -64,10 +64,13 @@
   banner?.addEventListener('click', (e) => {
     const btn = (e.target as HTMLElement).closest('[data-cookie]');
     if (!btn) return;
-    localStorage.setItem(KEY, btn.getAttribute('data-cookie') === 'accept' ? 'accepted' : 'declined');
+    const accepted = btn.getAttribute('data-cookie') === 'accept';
+    localStorage.setItem(KEY, accepted ? 'accepted' : 'declined');
     banner.hidden = true;
-    if (btn.getAttribute('data-cookie') === 'declined' && typeof (window as any).gtag === 'function') {
-      (window as any)['ga-disable-' + (window as any).gaId] = true;
-    }
+    (window as any).dataLayer = (window as any).dataLayer || [];
+    (window as any).dataLayer.push({
+      event: 'cookie_consent_update',
+      analytics_consent: accepted ? 'granted' : 'denied',
+    });
   });
 </script>

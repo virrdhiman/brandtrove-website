@@ -1,8 +1,12 @@
+---
+const gtmId = import.meta.env.PUBLIC_GTM_ID || 'GTM-MZV7M2CK';
+---
+
 <!-- Google Tag Manager (noscript) -->
-<noscript
-  ><iframe
-    src="https://www.googletagmanager.com/ns.html?id=GTM-MZV7M2CK"
+<noscript>
+  <iframe
+    src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
     height="0"
     width="0"
-    style="display:none;visibility:hidden"></iframe></noscript
->
+    style="display:none;visibility:hidden"></iframe>
+</noscript>

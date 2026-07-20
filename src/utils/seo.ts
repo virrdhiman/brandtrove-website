@@ -40,6 +40,35 @@ export function professionalServiceSchema() {
   };
 }
 
+export function itemListSchema(items: { name: string; url: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      url: item.url,
+    })),
+  };
+}
+
+export function serviceSchema(name: string, description: string, path: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name,
+    description,
+    url: new URL(path, SITE.url).href,
+    provider: {
+      '@type': 'Organization',
+      name: SITE.name,
+      url: SITE.url,
+    },
+    areaServed: ['IN', 'World'],
+  };
+}
+
 export function founderSchema() {
   return {
     '@context': 'https://schema.org',

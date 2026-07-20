@@ -3,9 +3,12 @@ import Layout from '../layouts/Layout.astro';
 import PageHero from '../components/PageHero.astro';
 import CtaBand from '../components/CtaBand.astro';
 import { IMAGES } from '../data/images';
+import { serviceSchema } from '../utils/seo';
+
+const description = 'Strategic brand partnerships with athletes, celebrities, and creators—built on alignment, strategy, and measurable outcomes.';
 ---
 
-<Layout title="Brand Partnerships" description="Strategic brand partnerships with athletes, celebrities, and creators—built on alignment, strategy, and measurable outcomes." path="/brand-partnerships">
+<Layout title="Brand Partnerships" description={description} path="/brand-partnerships" jsonLd={[serviceSchema('Brand Partnerships', description, '/brand-partnerships')]}>
   <PageHero eyebrow="Brand Partnerships" title="Strategic Brand Partnerships That Drive Real Impact" lead="We design structured collaborations between brands and influential personalities—built on alignment, strategy, and measurable outcomes." image={IMAGES.entertainment} />
 
   <section class="section"><div class="container prose">

@@ -4,14 +4,23 @@ import PageHero from '../../components/PageHero.astro';
 import CtaBand from '../../components/CtaBand.astro';
 import { BLOG_POSTS } from '../../data/blog';
 import { IMAGES } from '../../data/images';
+import { SITE } from '../../data/site';
+import { itemListSchema } from '../../utils/seo';
 
 const categories = [...new Set(BLOG_POSTS.map((p) => p.category))];
+const itemList = itemListSchema(
+  BLOG_POSTS.map((post) => ({
+    name: post.title,
+    url: new URL(`/blog/${post.slug}`, SITE.url).href,
+  }))
+);
 ---
 
 <Layout
   title="Blog & Insights"
   description="Expert perspectives on sports partnerships, celebrity endorsements, influencer marketing, brand campaigns, events, and global collaborations."
   path="/blog"
+  jsonLd={[itemList]}
 >
   <PageHero
     eyebrow="Brandtrove Insights"

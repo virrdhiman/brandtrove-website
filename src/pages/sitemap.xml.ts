@@ -46,6 +46,12 @@ export const GET: APIRoute = () => {
       changefreq: 'monthly',
     })),
     {
+      loc: new URL('/rss.xml', SITE.url).href,
+      lastmod: new Date().toISOString().slice(0, 10),
+      priority: '0.5',
+      changefreq: 'weekly',
+    },
+    {
       loc: new URL('/llms.txt', SITE.url).href,
       lastmod: new Date().toISOString().slice(0, 10),
       priority: '0.3',
@@ -53,6 +59,18 @@ export const GET: APIRoute = () => {
     },
     {
       loc: new URL('/llm.txt', SITE.url).href,
+      lastmod: new Date().toISOString().slice(0, 10),
+      priority: '0.3',
+      changefreq: 'monthly',
+    },
+    {
+      loc: new URL('/llms-full.txt', SITE.url).href,
+      lastmod: new Date().toISOString().slice(0, 10),
+      priority: '0.3',
+      changefreq: 'monthly',
+    },
+    {
+      loc: new URL('/ai.txt', SITE.url).href,
       lastmod: new Date().toISOString().slice(0, 10),
       priority: '0.3',
       changefreq: 'monthly',
