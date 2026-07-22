@@ -36,8 +36,24 @@ export function professionalServiceSchema() {
       addressCountry: SITE.country,
     },
     priceRange: '$$$$',
-    sameAs: activeSocialUrls(),
+    sameAs: networkSameAs(),
+    knowsAbout: [
+      'Brand partnerships',
+      'Sports marketing',
+      'Influencer marketing',
+      'Celebrity endorsements',
+    ],
   };
+}
+
+export function networkSameAs() {
+  return [
+    SITE.url,
+    'https://virender.in/',
+    'https://productiveit.in/',
+    'https://primespaceworks.com/',
+    ...activeSocialUrls(),
+  ];
 }
 
 export function itemListSchema(items: { name: string; url: string }[]) {
@@ -75,12 +91,21 @@ export function founderSchema() {
     '@type': 'Person',
     name: 'Virender',
     jobTitle: 'Founder',
+    url: 'https://virender.in/',
     worksFor: {
       '@type': 'Organization',
       name: SITE.name,
       url: SITE.url,
     },
     image: `${SITE.url}/images/founder-virender.png`,
+    sameAs: [
+      'https://virender.in/',
+      'https://productiveit.in/',
+      'https://primespaceworks.com/',
+      SITE.url,
+      SITE.social.linkedin,
+      SITE.social.x,
+    ].filter(Boolean),
     description:
       'Founder of Brandtrove. Technology and business transformation professional focused on strategic brand partnerships across sports, entertainment, and influencer ecosystems.',
   };

@@ -35,7 +35,15 @@ const year = new Date().getFullYear();
       </ul>
     </div>
     <div>
-      <h3>Legal</h3>
+      <h3>Network</h3>
+      <ul>
+        {FOOTER_NAV.network.map((item) => (
+          <li>
+            <a href={item.href} target="_blank" rel="noopener noreferrer">{item.label}</a>
+          </li>
+        ))}
+      </ul>
+      <h3 style="margin-top:1.25rem">Legal</h3>
       <ul>
         <li><a href="/terms-conditions">Terms & Conditions</a></li>
         <li><a href="/privacy-policy">Privacy Policy</a></li>

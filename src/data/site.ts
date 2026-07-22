@@ -27,7 +27,7 @@ export const SITE = {
   ogImage: '/images/hero-partnerships.jpg',
   poweredBy: {
     name: 'Productive IT',
-    url: 'https://www.productiveit.co.in',
+    url: 'https://productiveit.in/',
     shortLabel: 'POWERED BY',
     highlight: 'PRODUCTIVE',
     suffix: 'iT',
@@ -85,5 +85,11 @@ export const FOOTER_NAV = {
     { href: '/faq', label: 'FAQ' },
     { href: '/careers', label: 'Careers' },
     { href: '/contact', label: 'Contact' },
+  ],
+  network: [
+    { href: 'https://virender.in/', label: 'Virender Dhiman' },
+    { href: 'https://productiveit.in/', label: 'Productive IT' },
+    { href: 'https://primespaceworks.com/', label: 'PrimeSpaceWorks' },
+    { href: 'https://brandtroveglobal.com/', label: 'Brandtrove' },
   ],
 } as const;
